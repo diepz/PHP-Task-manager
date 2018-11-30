@@ -36,11 +36,10 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Task title</th>
-                    <th scope="col">Content</th>
-                    <th scope="col">Created</th>
-                    <th scope="col">Due Date</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Birth</th>
                     <th scope="col">Image</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -54,13 +53,13 @@
                     @foreach($tasks as $key => $task)
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
-                            <td>{{ $task->title }}</td>
-                            <td>{{ $task->content }}</td>
-                            <td>{{ $task->created_at }}</td>
-                            <td>{{ $task->due_date }}</td>
+                            <td>{{ $task->name }}</td>
+                            <td>{{ $task->birth }}</td>
                             <td>
                                 <img src="{{ asset('storage/images/' . $task->image) }}" alt="" style="width: 150px">
                             </td>
+
+
                         </tr>
                     @endforeach
                 @endif

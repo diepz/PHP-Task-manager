@@ -23,23 +23,16 @@
         <form class="text-left" method="POST" action="{{ route('tasks.store') }}" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
-                <label for="inputTitle">Task title</label>
+                <label for="inputTitle">Name</label>
                 <input type="text"
                        class="form-control"
                        id="inputTitle"
                        name="inputTitle"
                        required>
             </div>
+
             <div class="form-group">
-                <label for="inputContent">Task content</label>
-                <textarea class="form-control"
-                          id="inputContent"
-                          name="inputContent"
-                          rows="3"
-                          required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="inputDueDate">Due Date</label>
+                <label for="inputDueDate">Birth</label>
                 <input type="date"
                        class="form-control"
                        id="inputDueDate"
@@ -57,6 +50,7 @@
                        id="inputFile"
                        name="inputFile">
             </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <hr>
